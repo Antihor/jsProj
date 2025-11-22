@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="img/svg" href="/jsProj/assets/Favicon-BvABL4ig.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>JSPROJ</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="module" crossorigin src="/jsProj/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/jsProj/assets/vendor-DftXzQBe.js">
+    <link rel="stylesheet" crossorigin href="/jsProj/assets/vendor-pvxkJjp9.css">
+  </head>
+  <body>
+    <header>
+      <div class="header-container container">
+        <a class="logo" href="">
+          <img src="data:image/jpeg;base64,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" alt="Lloyd Jefferson" />
+          <p class="header-logo">jefferson*</p>
+        </a>
+        <div class="header-nav-wrap">
+          <button class="header-nav-btn" type="button">Menu</button>
+          <nav class="header-nav">
+            <a href="#about" class="header-nav-link">About me</a>
+            <a href="#bene" class="header-nav-link">Benefits</a>
+            <a href="#proj" class="header-nav-link">Projects</a>
+            <a href="#faq" class="header-nav-link">FAQ</a>
+          </nav>
+        </div>
+
+        <a class="header-link" href="#together">Order the project</a>
+      </div>
+    </header>
+    <main>
+      <!-- HERO -->
+      <!-- <section class="hero-section">
+        <div class="hero-container container">
+          <h1 class="hero-title">
+            Hello.<br />
+            I’m Fullstack developer Lloyd Jefferson.
+          </h1>
+          <div class="hero-links">
+            <ul class="hero-socia-list">
+              <li class="hero-soci-item">
+                <a
+                  class="hero-soci-link"
+                  href="https://www.instagram.com/goitclub/"
+                  >IG</a
+                >
+              </li>
+              <li class="hero-soci-item">
+                <a
+                  class="hero-soci-link"
+                  href="https://www.facebook.com/goITclub/"
+                  >FB</a
+                >
+              </li>
+              <li class="hero-soci-item">
+                <a class="hero-soci-link" href="https://www.youtube.com/c/GoIT"
+                  >YT</a
+                >
+              </li>
+              <li class="hero-soci-item">
+                <a class="hero-soci-link" href="">GH</a>
+              </li>
+            </ul>
+            <a class="hero-mail-link" href="mailto:lloydjefferson@gmail.com"
+              >lloydjefferson@gmail.com</a
+            >
+          </div>
+        </div>
+      </section> -->
+      <!-- ABOUT -->
+      <!-- <section id="about">
+        <div class="about-container container">
+          <div class="about-start">
+            <h2 class="about-title hidden">About me</h2>
+            <p class="about-title">
+              I work with people all over the world to create impressive and
+              <span class="about-span-red">functional</span>
+              <span class="about-span-grey">websites</span> that reflect each
+              client's unique personality.
+            </p>
+            <img
+              class="about-img"
+              src="./img/about/ab-img.jpg"
+              alt="Lloyd Jefferson"
+              width="680"
+              height="700"
+            />
+          </div> -->
+          <!-- Accordion -->
+          <!-- <ul class="ab-list">
+            <li class="ab-list-item">
+              <div class="ab-list-head">
+                <h3 class="ab-list-item-title">About me</h3>
+                <button class="ab-toggle-btn">
+                  <svg class="ab-icon" width="20" height="20">
+                    <use href="./img/sprite.svg#icon-arrUp"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="ab-list-content">
+                <p class="ab-list-txt long">
+                  I am Lloyd Jefferson, a talented programmer with extensive
+                  expertise in software development. I have an understanding of
+                  different programming languages and technologies, always ready
+                  to improve my skills. I always follow the latest trends and
+                  look for unconventional, creative solutions to problems. I
+                  have a high level of analytical skills and am able to
+                  effectively solve even the most difficult tasks encountered on
+                  the way.
+                </p>
+                <p class="ab-list-txt long">
+                  Able to work both independently and in a team. I can
+                  effectively cooperate with colleagues, exchanging ideas and
+                  finding optimal solutions. Professional maturity allows you to
+                  calmly cope with challenges and stressful situations, while
+                  maintaining a high quality of work. I am always looking for
+                  opportunities for self-improvement. I actively study new
+                  technologies and practices to stay abreast of the latest
+                  innovations. I have a strong understanding of various
+                  programming languages, frameworks and architectural concepts
+                  that allow me to create efficient and scalable software.
+                </p>
+              </div>
+            </li>
+            <li class="ab-list-item">
+              <div class="ab-list-head">
+                <h3 class="ab-list-item-title">Role</h3>
+                <button class="ab-toggle-btn">
+                  <svg class="ab-icon" width="20" height="20">
+                    <use href="./img/sprite.svg#icon-arrDown"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="ab-list-content hidden">
+                <p class="ab-list-txt">Frontend development</p>
+                <p class="ab-list-txt">HeadlessCMS, Wordpress</p>
+                <p class="ab-list-txt">Blender (enjoy)</p>
+              </div>
+            </li>
+            <li class="ab-list-item">
+              <div class="ab-list-head">
+                <h3 class="ab-list-item-title">Education</h3>
+                <button class="ab-toggle-btn">
+                  <svg class="ab-icon" width="20" height="20">
+                    <use href="./img/sprite.svg#icon-arrDown"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="ab-list-content hidden">
+                <p class="ab-list-txt">
+                  2018 - 2019 / Frontend Development Diploma, GoIT IT School,
+                  New York
+                </p>
+                <p class="ab-list-txt">
+                  2019 - 2020 / Advanced Web Development Certificate, GoIT IT
+                  School, New York
+                </p>
+                <p class="ab-list-txt">
+                  2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+                </p>
+              </div>
+            </li>
+          </ul> -->
+          <!-- /accordion -->
+
+          <div class="about-end">
+            <ul class="ab-skills-list">
+              <li class="skills-item">HTML/CSS</li>
+              <li class="skills-item">JavaScript</li>
+              <li class="skills-item">React</li>
+              <li class="skills-item">Node. js</li>
+              <li class="skills-item">React Native</li>
+              <li class="skills-item">Soft skills</li>
+            </ul>
+            <button class="ab-skills-btn">
+              <svg class="ab-icon" width="40" height="40">
+                <use href="/jsProj/assets/sprite-CzGrAHne.svg#icon-arrRightLight"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- BENEFITS -->
+      <!-- <section id="bene">
+        <div class="bene-container container">
+          <h2 class="bene-title">Benefits of working with me</h2>
+          <div class="bene-content">
+            <ul class="bene-list">
+              <li class="bene-item">
+                <svg class="bene-card-pic" width="48" height="48">
+                  <use href="./img/sprite.svg#icon-bene-exp"></use>
+                </svg>
+                <h3 class="bene-item-head">Expertise</h3>
+                <p class="bene-item-txt">
+                  As a highly experienced developer, I have deep knowledge of
+                  programming and website development.
+                </p>
+              </li>
+              <li class="bene-item">
+                <svg class="bene-card-pic" width="48" height="48">
+                  <use href="./img/sprite.svg#icon-bene-com"></use>
+                </svg>
+                <h3 class="bene-item-head">Communication</h3>
+                <p class="bene-item-txt">
+                  Understanding your needs and wants is my priority and I am
+                  always open to discussions and corrections.
+                </p>
+              </li>
+              <li class="bene-item">
+                <svg class="bene-card-pic" width="48" height="48">
+                  <use href="./img/sprite.svg#icon-bene-art"></use>
+                </svg>
+                <h3 class="bene-item-head">Art</h3>
+                <p class="bene-item-txt">
+                  Thanks to my creative nature, I am ready to accept challenges
+                  and help you bring your ideas to life.
+                </p>
+              </li>
+              <li class="bene-item">
+                <svg class="bene-card-pic" width="48" height="48">
+                  <use href="./img/sprite.svg#icon-bene-urg"></use>
+                </svg>
+                <h3 class="bene-item-head">Urgent execution</h3>
+                <p class="bene-item-txt">
+                  I understand how important time is to you. Ready to work
+                  quickly and efficiently, without reducing the quality of work.
+                </p>
+              </li>
+            </ul>
+            <a class="bene-link" href="#together">Order the project</a>
+          </div>
+        </div>
+      </section> -->
+      <!-- PROJECTS -->
+      <!-- <section id="proj">
+        <div class="proj-container container">
+          <h2 class="proj-title">Projects</h2>
+          <ul class="proj-list">
+            <li class="proj-card">
+              <div class="proj-card-cont">
+                <ul class="proj-card-props">
+                  <li class="props-item">#react</li>
+                  <li class="props-item">#js</li>
+                  <li class="props-item">#node js</li>
+                  <li class="props-item">#git</li>
+                </ul>
+                <h3 class="proj-card-title">
+                  Programming Across<br />
+                  Borders: Ideas,<br />Technologies, Innovations
+                </h3>
+                <button class="proj-card-btn">See project</button>
+              </div>
+              <div class="proj-card-img">
+                <img src="./img/proj/proj-card1.jpg" alt="First Project" />
+              </div>
+            </li>
+            <li class="proj-card hidden">
+              <div class="proj-card-cont">
+                <ul class="proj-card-props">
+                  <li class="props-item">#react</li>
+                  <li class="props-item">#js</li>
+                  <li class="props-item">#node js</li>
+                  <li class="props-item">#git</li>
+                </ul>
+                <h3 class="proj-card-title">
+                  Programming Across<br />
+                  Borders: Ideas,<br />Technologies, Innovations
+                </h3>
+                <button class="proj-card-btn">See project</button>
+              </div>
+              <div class="proj-card-img">
+                <img src="./img/proj/proj-card2.jpg" alt="Second Project" />
+              </div>
+            </li>
+            <li class="proj-card hidden">
+              <div class="proj-card-cont">
+                <ul class="proj-card-props">
+                  <li class="props-item">#react</li>
+                  <li class="props-item">#js</li>
+                  <li class="props-item">#node js</li>
+                  <li class="props-item">#git</li>
+                </ul>
+                <h3 class="proj-card-title">
+                  Programming Across<br />
+                  Borders: Ideas,<br />Technologies, Innovations
+                </h3>
+                <button class="proj-card-btn">See project</button>
+              </div>
+              <div class="proj-card-img">
+                <img src="./img/proj/proj-card3.jpg" alt="Third Project" />
+              </div>
+            </li>
+          </ul>
+          <div class="proj-btns">
+            <button class="proj-btn">
+              <svg class="proj-btn-icon" width="32" height="32">
+                <use href="./img/sprite.svg#icon-arrLeftDark"></use>
+              </svg>
+            </button>
+            <button class="proj-btn">
+              <svg class="proj-btn-icon" width="32" height="32">
+                <use href="./img/sprite.svg#icon-arrRightLight"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section> -->
+      <!-- FAQ -->
+      <!-- <section id="faq">
+        <div class="faq-container container">
+          <h2 class="faq-title">FAQ</h2>
+          <ul class="faq-list">
+            <li class="faq-list-item">
+              <div class="faq-wrap">
+                <h3 class="faq-item-title">
+                  What programming languages ​​are most often used in your
+                  project?
+                </h3>
+                <button class="faq-toggle-btn">
+                  <svg class="faq-btn-icon" width="20" height="20">
+                    <use href="./img/sprite.svg#icon-arrUp"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <p class="faq-list-txt">
+                In the field of web development, there are various technologies
+                and programming languages. Typically, this includes a
+                combination of frontend (client side) and backend (server side)
+                languages.
+              </p>
+            </li>
+            <li class="faq-list-item">
+              <div class="faq-wrap">
+                <h3 class="faq-item-title">How can I contact you?</h3>
+                <button class="faq-toggle-btn">
+                  <svg class="faq-btn-icon" width="20" height="20">
+                    <use href="./img/sprite.svg#icon-arrUp"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <p class="faq-list-txt">
+                In the field of web development, there are various technologies
+                and programming languages. Typically, this includes a
+                combination of frontend (client side) and backend (server side)
+                languages.
+              </p>
+            </li>
+
+            <li class="faq-list-item">
+              <div class="faq-wrap">
+                <h3 class="faq-item-title">
+                  What are the deadlines for the project?
+                </h3>
+                <button class="faq-toggle-btn">
+                  <svg class="faq-btn-icon" width="20" height="20">
+                    <use href="./img/sprite.svg#icon-arrUp"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <p class="faq-list-txt">
+                The terms of project implementation depend to a large extent on
+                a number of factors, such as the scope of the project, its
+                complexity, and the availability of resources. Determining exact
+                deadlines is a difficult task, and it usually occurs during the
+                planning phase of the project.
+              </p>
+            </li>
+            <li class="faq-list-item">
+              <div class="faq-wrap">
+                <h3 class="faq-item-title">
+                  Do you provide advice or support?
+                </h3>
+                <button class="faq-toggle-btn">
+                  <svg class="faq-btn-icon" width="20" height="20">
+                    <use href="./img/sprite.svg#icon-arrUp"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <p class="faq-list-txt">
+                The terms of project implementation depend to a large extent on
+                a number of factors, such as the scope of the project, its
+                complexity, and the availability of resources. Determining exact
+                deadlines is a difficult task, and it usually occurs during the
+                planning phase of the project.
+              </p>
+            </li>
+            <li class="faq-list-item">
+              <div class="faq-wrap">
+                <h3 class="faq-item-title">
+                  What payment methods do you accept?
+                </h3>
+                <button class="faq-toggle-btn">
+                  <svg class="faq-btn-icon" width="20" height="20">
+                    <use href="./img/sprite.svg#icon-arrUp"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <p class="faq-list-txt">
+                Payment through credit and debit cards such as Visa, MasterCard,
+                specialized electronic payment systems such as PayPal, as well
+                as payments in cryptocurrencies such as Bitcoin, Ethereum and
+                others.
+              </p>
+            </li>
+            <li class="faq-list-item">
+              <div class="faq-wrap">
+                <h3 class="faq-item-title">
+                  What does the process of developing a software<br />
+                  product look like from idea to implementation?
+                </h3>
+                <button class="faq-toggle-btn">
+                  <svg class="faq-btn-icon" width="20" height="20">
+                    <use href="./img/sprite.svg#icon-arrUp"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <p class="faq-list-txt">
+                Bull text follows: Payment through credit and debit cards such
+                as Visa, MasterCard, specialized electronic payment systems such
+                as PayPal, as well as payments in cryptocurrencies such as...
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section> -->
+      <!-- COVERS -->
+      <!-- <section>
+        <div class="covers-container container">
+          <h2 class="covers-title hidden"></h2>
+          <div class="marquee">
+            <div class="marquee-inner">
+              <img
+                src="./img/covers/cov1.jpg"
+                alt="cover1"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov2.jpg"
+                alt="cover2"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov3.jpg"
+                alt="cover3"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov4.jpg"
+                alt="cover4"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov5.jpg"
+                alt="cover5"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov6.jpg"
+                alt="cover6"
+                class="marquee-line"
+              />
+            </div>
+            <div class="marquee-inner">
+              <img
+                src="./img/covers/cov6.jpg"
+                alt="cover 6"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov7.jpg"
+                alt="cover 7"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov8.jpg"
+                alt="cover 8"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov9.jpg"
+                alt="cover 9"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov10.jpg"
+                alt="cover 10"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov1.jpg"
+                alt="cover 1"
+                class="marquee-line"
+              />
+            </div>
+            <div class="marquee-inner">
+              <img
+                src="./img/covers/cov1.jpg"
+                alt="cover1"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov2.jpg"
+                alt="cover2"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov3.jpg"
+                alt="cover3"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov4.jpg"
+                alt="cover4"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov5.jpg"
+                alt="cover5"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov6.jpg"
+                alt="cover6"
+                class="marquee-line"
+              />
+            </div>
+            <div class="marquee-inner">
+              <img
+                src="./img/covers/cov6.jpg"
+                alt="cover 6"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov7.jpg"
+                alt="cover 7"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov8.jpg"
+                alt="cover 8"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov9.jpg"
+                alt="cover 9"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov10.jpg"
+                alt="cover 10"
+                class="marquee-line"
+              />
+              <img
+                src="./img/covers/cov1.jpg"
+                alt="cover 1"
+                class="marquee-line"
+              />
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- REVIEWS -->
+      <!-- <section>
+        <div class="rev-container container">
+          <h2 class="rev-title">REVIEWS</h2>
+          <ul class="rev-list">
+            <li class="rev-card">
+              <img
+                class="rev-card-img"
+                src="./img/reviews/Natalia.jpg"
+                alt="Natalia"
+                width="48"
+                height="48"
+              />
+              <h3 class="rev-card-title">Natalia</h3>
+              <p class="rev-card-txt">
+                Work with was extraordinary! He turned out to be a very
+                competent and responsible specialist. The projects were
+                completed on time and the result exceeded my expectations
+              </p>
+            </li>
+            <li class="rev-card">
+              <img
+                class="rev-card-img"
+                src="./img/reviews/Dmytro.jpg"
+                alt="Dmytro"
+                width="48"
+                height="48"
+              />
+              <h3 class="rev-card-title">Dmytro</h3>
+              <p class="rev-card-txt">
+                I have the honor to recommend him as an exceptional professional
+                in his field. His knowledge and expertise are undeniable.
+                Cooperation with him always brings impressive results.
+              </p>
+            </li>
+            <li class="rev-card">
+              <img
+                class="rev-card-img"
+                src="./img/reviews/Anna.jpg"
+                alt="Anna"
+                width="48"
+                height="48"
+              />
+              <h3 class="rev-card-title">Anna</h3>
+              <p class="rev-card-txt">
+                The developed project impresses with its quality and efficiency.
+                The code is cleanly written and the functionality exceeds
+                expectations. Extremely satisfied with the cooperation!
+              </p>
+            </li>
+            <li class="rev-card">
+              <img
+                class="rev-card-img"
+                src="./img/reviews/Ivetta.jpg"
+                alt="Ivetta"
+                width="48"
+                height="48"
+              />
+              <h3 class="rev-card-title">Ivetta</h3>
+              <p class="rev-card-txt">
+                Thanks for the excellent work on the project! His talent and
+                professionalism deserve recognition. I recommend it to everyone
+                who is looking for an expert in the field of software
+                development.
+              </p>
+            </li>
+          </ul>
+          <div class="rev-btns">
+            <button class="rev-btn">
+              <svg class="rev-btn-icon" width="32" height="32">
+                <use href="./img/sprite.svg#icon-arrLeftDark"></use>
+              </svg>
+            </button>
+            <button class="rev-btn">
+              <svg class="rev-btn-icon" width="32" height="32">
+                <use href="./img/sprite.svg#icon-arrRightLight"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section> -->
+    </main>
+    <!-- TOGETHER -->
+    <!-- <footer id="together">
+      <div class="footer-container container">
+        <div class="footer-title-wrap">
+          <img
+            src="./img/logo-img.jpg"
+            alt="lloyd Jefferson"
+            class="footer-img"
+            width="70"
+            height="70"
+          />
+          <h2 class="footer-title">
+            Let’s <span class="footer-title-span">work</span>
+          </h2>
+        </div>
+
+        <p class="footer-title footer-title-end">together</p>
+        <form action="" class="footer-form">
+          <div class="footer-form-inputs">
+            <input
+              class="footer-form-input"
+              name="email"
+              type="email"
+              placeholder="clients@gmail.com"
+              pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+            />
+            <input
+              class="footer-form-input"
+              type="text"
+              name="comments"
+              placeholder="comments"
+            />
+          </div>
+
+          <button class="footer-form-btn" type="submit">Send</button>
+        </form>
+        <address class="footer-conts">
+          <button class="footer-cont-btn" type="button">
+            lloydjefferson@gmail.com
+          </button>
+          <button class="footer-cont-btn" type="button">
+            +380 11 1111 11 11
+          </button>
+        </address>
+      </div>
+    </footer> -->
+    <!-- MODAL -->
+    <!-- <div class="modal-bd">
+      <div class="modal">
+        <svg class="modal-close-btn" width="24" height="24">
+          <use></use>
+        </svg>
+        <h2 class="modal-title">Thank you for your interest in cooperation!</h2>
+        <p class="modal-txt">
+          The manager will contact you shortly to discuss further details and
+          opportunities for cooperation. Please stay in touch.
+        </p>
+      </div>
+    </div> -->
+
+  </body>
+</html>
