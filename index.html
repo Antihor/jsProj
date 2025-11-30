@@ -19,9 +19,7 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" crossorigin src="/jsProj/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/jsProj/assets/vendor-DftXzQBe.js">
-    <link rel="stylesheet" crossorigin href="/jsProj/assets/vendor-pvxkJjp9.css">
-    <link rel="stylesheet" crossorigin href="/jsProj/assets/index-Cs6J7bmX.css">
+    <link rel="stylesheet" crossorigin href="/jsProj/assets/index-C9GS_zeF.css">
   </head>
   <body>
     <header>
@@ -31,8 +29,8 @@
           <p class="header-logo">jefferson*</p>
         </a>
         <div class="header-nav-wrap">
-          <button class="header-nav-btn" type="button">Menu</button>
-          <nav class="header-nav">
+          <button class="header-nav-btn js-nav-btn" type="button">Menu</button>
+          <nav class="header-nav js-header-nav">
             <a href="#about" class="header-nav-link">About me</a>
             <a href="#bene" class="header-nav-link">Benefits</a>
             <a href="#proj" class="header-nav-link">Projects</a>
@@ -102,13 +100,16 @@
             />
           </div>
           <!-- Accordion -->
-          <ul class="ab-list">
+          <ul class="ab-list accordion-container">
             <li class="ab-list-item">
               <div class="ab-list-head">
                 <h3 class="ab-list-item-title">About me</h3>
                 <button class="ab-toggle-btn">
                   <svg class="ab-icon" width="20" height="20">
-                    <use href="/jsProj/assets/sprite-CzGrAHne.svg#icon-arrUp"></use>
+                    <use
+                      href="/jsProj/assets/sprite-CzGrAHne.svg#icon-arrUp"
+                      class="ab-icon-use"
+                    ></use>
                   </svg>
                 </button>
               </div>
@@ -142,11 +143,14 @@
                 <h3 class="ab-list-item-title">Role</h3>
                 <button class="ab-toggle-btn">
                   <svg class="ab-icon" width="20" height="20">
-                    <use href="/jsProj/assets/sprite-CzGrAHne.svg#icon-arrDown"></use>
+                    <use
+                      href="/jsProj/assets/sprite-CzGrAHne.svg#icon-arrDown"
+                      class="ab-icon-use"
+                    ></use>
                   </svg>
                 </button>
               </div>
-              <div class="ab-list-content hidden">
+              <div class="ab-list-content">
                 <p class="ab-list-txt">Frontend development</p>
                 <p class="ab-list-txt">HeadlessCMS, Wordpress</p>
                 <p class="ab-list-txt">Blender (enjoy)</p>
@@ -157,11 +161,14 @@
                 <h3 class="ab-list-item-title">Education</h3>
                 <button class="ab-toggle-btn">
                   <svg class="ab-icon" width="20" height="20">
-                    <use href="/jsProj/assets/sprite-CzGrAHne.svg#icon-arrDown"></use>
+                    <use
+                      href="/jsProj/assets/sprite-CzGrAHne.svg#icon-arrDown"
+                      class="ab-icon-use"
+                    ></use>
                   </svg>
                 </button>
               </div>
-              <div class="ab-list-content hidden">
+              <div class="ab-list-content">
                 <p class="ab-list-txt">
                   2018 - 2019 / Frontend Development Diploma, GoIT IT School,
                   New York
@@ -176,18 +183,17 @@
               </div>
             </li>
           </ul>
-          /accordion
 
-          <div class="about-end">
-            <ul class="ab-skills-list">
-              <li class="skills-item">HTML/CSS</li>
-              <li class="skills-item">JavaScript</li>
-              <li class="skills-item">React</li>
-              <li class="skills-item">Node. js</li>
-              <li class="skills-item">React Native</li>
-              <li class="skills-item">Soft skills</li>
+          <div class="about-end swiper">
+            <ul class="ab-skills-list swiper-wrapper">
+              <li class="skills-item swiper-slide">HTML/CSS</li>
+              <li class="skills-item swiper-slide">JavaScript</li>
+              <li class="skills-item swiper-slide">React</li>
+              <li class="skills-item swiper-slide">Node. js</li>
+              <li class="skills-item swiper-slide">React Native</li>
+              <li class="skills-item swiper-slide">Soft skills</li>
             </ul>
-            <button class="ab-skills-btn">
+            <button class="ab-skills-btn swiper-button-next">
               <svg class="ab-icon" width="40" height="40">
                 <use href="/jsProj/assets/sprite-CzGrAHne.svg#icon-arrRightLight"></use>
               </svg>
@@ -250,73 +256,75 @@
       <section id="proj">
         <div class="proj-container container">
           <h2 class="proj-title">Projects</h2>
-          <ul class="proj-list">
-            <li class="proj-card">
-              <div class="proj-card-cont">
-                <ul class="proj-card-props">
-                  <li class="props-item">#react</li>
-                  <li class="props-item">#js</li>
-                  <li class="props-item">#node js</li>
-                  <li class="props-item">#git</li>
-                </ul>
-                <h3 class="proj-card-title">
-                  Programming Across<br />
-                  Borders: Ideas,<br />Technologies, Innovations
-                </h3>
-                <button class="proj-card-btn">See project</button>
-              </div>
-              <div class="proj-card-img">
-                <img src="/jsProj/assets/proj-card1-CCuAg3D_.jpg" alt="First Project" />
-              </div>
-            </li>
-            <li class="proj-card hidden">
-              <div class="proj-card-cont">
-                <ul class="proj-card-props">
-                  <li class="props-item">#react</li>
-                  <li class="props-item">#js</li>
-                  <li class="props-item">#node js</li>
-                  <li class="props-item">#git</li>
-                </ul>
-                <h3 class="proj-card-title">
-                  Programming Across<br />
-                  Borders: Ideas,<br />Technologies, Innovations
-                </h3>
-                <button class="proj-card-btn">See project</button>
-              </div>
-              <div class="proj-card-img">
-                <img src="/jsProj/assets/proj-card2-DgDXvZ0a.jpg" alt="Second Project" />
-              </div>
-            </li>
-            <li class="proj-card hidden">
-              <div class="proj-card-cont">
-                <ul class="proj-card-props">
-                  <li class="props-item">#react</li>
-                  <li class="props-item">#js</li>
-                  <li class="props-item">#node js</li>
-                  <li class="props-item">#git</li>
-                </ul>
-                <h3 class="proj-card-title">
-                  Programming Across<br />
-                  Borders: Ideas,<br />Technologies, Innovations
-                </h3>
-                <button class="proj-card-btn">See project</button>
-              </div>
-              <div class="proj-card-img">
-                <img src="/jsProj/assets/proj-card3-4F3ZGYBc.jpg" alt="Third Project" />
-              </div>
-            </li>
-          </ul>
-          <div class="proj-btns">
-            <button class="proj-btn">
-              <svg class="proj-btn-icon" width="32" height="32">
-                <use href="/jsProj/assets/sprite-CzGrAHne.svg#icon-arrLeftDark"></use>
-              </svg>
-            </button>
-            <button class="proj-btn">
-              <svg class="proj-btn-icon" width="32" height="32">
-                <use href="/jsProj/assets/sprite-CzGrAHne.svg#icon-arrRightLight"></use>
-              </svg>
-            </button>
+          <div class="swiper">
+            <ul class="proj-list swiper-wrapper">
+              <li class="proj-card swiper-slide">
+                <div class="proj-card-cont">
+                  <ul class="proj-card-props">
+                    <li class="props-item">#react</li>
+                    <li class="props-item">#js</li>
+                    <li class="props-item">#node js</li>
+                    <li class="props-item">#git</li>
+                  </ul>
+                  <h3 class="proj-card-title">
+                    Programming Across<br />
+                    Borders: Ideas,<br />Technologies, Innovations
+                  </h3>
+                  <button class="proj-card-btn">See project</button>
+                </div>
+                <div class="proj-card-img">
+                  <img src="/jsProj/assets/proj-card1-CCuAg3D_.jpg" alt="First Project" />
+                </div>
+              </li>
+              <li class="proj-card swiper-slide">
+                <div class="proj-card-cont">
+                  <ul class="proj-card-props">
+                    <li class="props-item">#react</li>
+                    <li class="props-item">#js</li>
+                    <li class="props-item">#node js</li>
+                    <li class="props-item">#git</li>
+                  </ul>
+                  <h3 class="proj-card-title">
+                    Programming Across<br />
+                    Borders: Ideas,<br />Technologies, Innovations
+                  </h3>
+                  <button class="proj-card-btn">See project</button>
+                </div>
+                <div class="proj-card-img">
+                  <img src="/jsProj/assets/proj-card2-DgDXvZ0a.jpg" alt="Second Project" />
+                </div>
+              </li>
+              <li class="proj-card swiper-slide">
+                <div class="proj-card-cont">
+                  <ul class="proj-card-props">
+                    <li class="props-item">#react</li>
+                    <li class="props-item">#js</li>
+                    <li class="props-item">#node js</li>
+                    <li class="props-item">#git</li>
+                  </ul>
+                  <h3 class="proj-card-title">
+                    Programming Across<br />
+                    Borders: Ideas,<br />Technologies, Innovations
+                  </h3>
+                  <button class="proj-card-btn">See project</button>
+                </div>
+                <div class="proj-card-img">
+                  <img src="/jsProj/assets/proj-card3-4F3ZGYBc.jpg" alt="Third Project" />
+                </div>
+              </li>
+            </ul>
+            <div class="proj-btns">
+              <button class="proj-btn swiper-button-prev">
+                <svg class="proj-btn-icon" width="32" height="32">
+                  <use href="/jsProj/assets/sprite-CzGrAHne.svg#icon-arrLeftDark"></use>
+                </svg>
+              </button>
+              <button class="proj-btn swiper-button-next">
+                <svg class="proj-btn-icon" width="32" height="32">
+                  <use href="/jsProj/assets/sprite-CzGrAHne.svg#icon-arrRightLight"></use>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </section>
