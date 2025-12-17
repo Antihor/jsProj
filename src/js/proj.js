@@ -5,10 +5,11 @@ import { Navigation } from 'swiper/modules';
 const swiper = new Swiper('.swiper', {
   modules: [Navigation],
   navigation: {
-    nextEl: document.querySelector('.proj-btn swiper-button-next'),
-    prevEl: document.querySelector('.proj-btn swiper-button-prev'),
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
-  speed: 500,
+  speed: 900,
+  spaceBetween: 120,
   slidesPerView: 1,
   cssMode: true,
 });

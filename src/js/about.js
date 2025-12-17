@@ -2,9 +2,10 @@ import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
 import Swiper from 'swiper';
+import 'swiper/css';
 import { Navigation } from 'swiper/modules';
 
-const accordion = new Accordion('.accordion-container', {
+new Accordion('.accordion-container', {
   elementClass: 'ab-list-item',
   triggerClass: 'ab-toggle-btn',
   panelClass: 'ab-list-content',
@@ -32,17 +33,18 @@ items.forEach(item => {
   }
 });
 
-const next = document.querySelector('.swiper-button-next');
+// ==========swiper=============
 
-const swiper = new Swiper('.about-end', {
+new Swiper('.about-end', {
   modules: [Navigation],
   loop: true,
   slidesPerView: 6,
   oneWayMovement: true,
   slideToClickedSlide: true,
   loopedSlides: 6,
+  centeredSlides: false,
   navigation: {
-    nextEl: next,
+    nextEl: '.swiper-button-next',
   },
   spaceBetween: 0,
   cssMode: true,
