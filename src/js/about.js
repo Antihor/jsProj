@@ -26,9 +26,9 @@ items.forEach(item => {
   function toggleIcon() {
     const icon = trigger.querySelector('use');
     if (item.classList.contains('is-active')) {
-      icon.setAttribute('href', `./img/sprite.svg#icon-arrUp`);
+      icon.setAttribute('href', `../img/sprite.svg#icon-arrUp`);
     } else {
-      icon.setAttribute('href', './img/sprite.svg#icon-arrDown');
+      icon.setAttribute('href', '../img/sprite.svg#icon-arrDown');
     }
   }
 });
@@ -36,6 +36,7 @@ items.forEach(item => {
 // ==========swiper=============
 
 new Swiper('.about-end', {
+  duration: 300,
   modules: [Navigation],
   loop: true,
   slidesPerView: 6,
